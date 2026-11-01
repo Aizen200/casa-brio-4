@@ -74,7 +74,34 @@ function V_() {
         <div className="absolute top-1/4 left-10 h-[500px] w-[500px] rounded-full bg-[#d4af37]/[0.03] blur-[160px]" />
         <div className="absolute bottom-1/4 right-10 h-[600px] w-[600px] rounded-full bg-[#d4af37]/[0.025] blur-[180px]" />
       </div>
-      <div ref={i} className="relative h-[280vh] sm:h-[300vh] w-full">
+      <div className="relative z-10 px-6 py-16 sm:px-8 sm:py-20 md:hidden">
+        <div className="text-center">
+          <div className="inline-flex items-center justify-center gap-2.5 mb-3">
+            <span className="h-px w-6 bg-[#d4af37]" />
+            <span className="eyebrow text-[10px] tracking-[0.28em] font-semibold text-[#d4af37]">
+              PARTY ROOM GUESTS
+            </span>
+            <span className="h-px w-6 bg-[#d4af37]" />
+          </div>
+          <h2 className="font-serif text-4xl sm:text-5xl font-normal leading-[1.05] tracking-tight text-[#f4efe6]">
+            Happy <span className="text-[#d4af37] font-normal">Guests</span>
+          </h2>
+        </div>
+        <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4">
+          {b.map((t, s) => (
+            <button
+              type="button"
+              key={t.image}
+              onClick={() => a(t)}
+              className={`relative aspect-[3/4] overflow-hidden border border-[rgba(212,175,55,0.3)] bg-[#121015] shadow-[0_20px_50px_rgba(0,0,0,0.8)] transition-transform active:scale-95 ${s % 2 ? "translate-y-6" : ""}`}
+            >
+              <img src={t.image} alt={t.alt} className="h-full w-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+            </button>
+          ))}
+        </div>
+      </div>
+      <div ref={i} className="relative hidden md:block h-[300vh] w-full">
         <div className="sticky top-0 h-screen w-full flex items-center justify-center overflow-hidden bg-[#050505] [perspective:1200px]">
           <div className="pointer-events-none absolute inset-0 flex items-center justify-center z-0">
             <div className="h-[400px] sm:h-[600px] w-[400px] sm:w-[600px] rounded-full bg-[#d4af37]/[0.08] blur-[140px]" />
@@ -410,7 +437,7 @@ function PartyRoomClient() {
                   </motion.div>
                 </motion.div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-b from-[#08080a]/65 via-[#08080a]/40 to-[#08080a]/85 pointer-events-none z-10" />
+              <div className="absolute inset-0 bg-gradient-to-b from-[#08080a]/70 via-[#08080a]/60 to-[#08080a]/85 pointer-events-none z-10" />
               <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#08080a] via-[#08080a]/80 to-transparent pointer-events-none z-10" />
               <div className="absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-[#08080a]/75 to-transparent pointer-events-none z-10" />
               <motion.div

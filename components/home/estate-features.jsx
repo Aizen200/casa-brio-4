@@ -208,7 +208,7 @@ function EstateFeatures() {
           <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-3 pt-1">
             {c.map((e, t) => (
               <div
-                className="w-[80vw] sm:w-[350px] shrink-0 snap-start flex flex-col"
+                className="w-[76vw] sm:w-[350px] shrink-0 snap-start flex flex-col"
                 key={e.title}
               >
                 <X_ item={e} featureIdx={t} onOpenModal={n} isMobile={!0} />

@@ -35,7 +35,7 @@ function MobileBottomNav() {
       aria-label="Mobile Navigation"
       className="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#0c0a10]/95 backdrop-blur-xl border-t border-[rgba(212,175,55,0.22)] shadow-[0_-10px_35px_rgba(0,0,0,0.9)]"
     >
-      <div className="grid grid-cols-4 items-center justify-around px-2 pt-2 pb-2.5">
+      <div className="grid grid-cols-4 items-center justify-around px-1 pt-2 pb-[max(0.625rem,env(safe-area-inset-bottom))]">
         {f.map((n) => {
           let O = n.icon,
             a = e === n.href || ("/" !== n.href && e.startsWith(n.href + "/"));
@@ -51,9 +51,13 @@ function MobileBottomNav() {
               <div
                 className={`transition-transform duration-300 ${a ? "scale-110" : "group-hover:scale-105"}`}
               >
-                <O className="h-5 w-5 text-[#ffd700] drop-shadow-[0_0_8px_rgba(255,215,0,0.6)]" />
+                <O
+                  className={`h-5 w-5 text-[#ffd700] ${a ? "drop-shadow-[0_0_8px_rgba(255,215,0,0.6)]" : "opacity-80"}`}
+                />
               </div>
-              <span className="font-sans text-[10.5px] tracking-[0.14em] uppercase font-bold text-[#ffd700] drop-shadow-[0_0_6px_rgba(255,215,0,0.4)]">
+              <span
+                className={`font-sans text-[10.5px] tracking-[0.14em] uppercase transition-colors ${a ? "font-bold text-[#ffd700] drop-shadow-[0_0_6px_rgba(255,215,0,0.4)]" : "font-normal text-[#9e988f] group-hover:text-[#f4efe6]"}`}
+              >
                 {n.label}
               </span>
             </Link>

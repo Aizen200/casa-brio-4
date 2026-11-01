@@ -323,7 +323,7 @@ export const GalleryClient = function () {
                 </div>
                 <div className="max-w-4xl mx-auto">
                   <Reveal delay={0.3}>
-                    <div className="mt-8 flex w-full items-center justify-start sm:justify-center gap-2 sm:gap-2.5 overflow-x-auto no-scrollbar py-1 px-1">
+                    <div className="mt-8 -mx-6 flex w-[calc(100%+3rem)] items-center justify-start gap-2 overflow-x-auto no-scrollbar px-6 py-1 sm:mx-0 sm:w-full sm:justify-center sm:gap-2.5 sm:px-1">
                       {x.map((r) => {
                         let i = e === r.label;
                         return (

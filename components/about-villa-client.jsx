@@ -514,7 +514,7 @@ function AboutVillaClient() {
           </Reveal>
           <div className="lg:hidden -mx-6 px-6 sm:-mx-8 sm:px-8">
             <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-3 pt-1">
-              <div className="w-[80vw] sm:w-[350px] shrink-0 snap-start flex flex-col">
+              <div className="w-[76vw] sm:w-[350px] shrink-0 snap-start flex flex-col">
                 <div className="group flex flex-col justify-between h-full border border-[rgba(212,175,55,0.22)] bg-[#0c0a0f] p-7 sm:p-8 transition-all duration-300 shadow-xl">
                   <div>
                     <div className="h-9 pb-3 border-b border-[rgba(212,175,55,0.18)] flex items-center justify-between">
@@ -595,7 +595,7 @@ function AboutVillaClient() {
                   </div>
                 </div>
               </div>
-              <div className="w-[80vw] sm:w-[350px] shrink-0 snap-start flex flex-col">
+              <div className="w-[76vw] sm:w-[350px] shrink-0 snap-start flex flex-col">
                 <div className="relative group flex flex-col justify-between h-full border-2 border-[#d4af37] bg-[#131017] p-7 sm:p-8 shadow-[0_12px_45px_rgba(212,175,55,0.18)] transition-all duration-300">
                   <div>
                     <div className="h-9 pb-3 border-b border-[#d4af37]/30 flex items-center justify-between">
@@ -659,7 +659,7 @@ function AboutVillaClient() {
                   </div>
                 </div>
               </div>
-              <div className="w-[80vw] sm:w-[350px] shrink-0 snap-start flex flex-col pr-2">
+              <div className="w-[76vw] sm:w-[350px] shrink-0 snap-start flex flex-col pr-2">
                 <div className="group flex flex-col justify-between h-full border border-[rgba(212,175,55,0.22)] bg-[#0c0a0f] p-7 sm:p-8 transition-all duration-300 shadow-xl">
                   <div>
                     <div className="h-9 pb-3 border-b border-[rgba(212,175,55,0.18)] flex items-center justify-between">

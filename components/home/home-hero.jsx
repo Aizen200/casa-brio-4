@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SiteHeader } from "@/components/site-header";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ShieldCheck, Trophy, Waves, Wine } from "lucide-react";
 let d = [
     {
       src: "/images/bungalow/master-suite-view.jpg",
@@ -51,24 +51,28 @@ let d = [
     {
       num: "01",
       tag: "PRIVACY",
+      icon: ShieldCheck,
       value: "Fully Private",
       label: "No other guests, nothing shared",
     },
     {
       num: "02",
       tag: "POOL",
+      icon: Waves,
       value: "Private Swimming Pool",
       label: "Lit-up deck with sunbeds",
     },
     {
       num: "03",
       tag: "SPORTS",
+      icon: Trophy,
       value: "Box Cricket Turf",
       label: "Floodlights for night games",
     },
     {
       num: "04",
       tag: "PARTY",
+      icon: Wine,
       value: "Party Room & Bar",
       label: "Snooker, music and games",
     },
@@ -260,7 +264,26 @@ export const Hero = function () {
         </motion.div>
       </div>
       <div className="relative z-20 mx-auto w-full max-w-7xl px-6 pb-12 sm:px-8 lg:px-12">
-        <div className="relative rounded-none border border-[#d4af37]/30 bg-[#121015]/90 backdrop-blur-2xl p-6 sm:p-7">
+        <div className="grid grid-cols-2 gap-px border border-[#d4af37]/25 bg-[#d4af37]/20 sm:hidden">
+          {c.map((e) => {
+            let A = e.icon;
+            return (
+              <div className="relative flex flex-col bg-[#121015]/95 p-4 backdrop-blur-2xl" key={e.value}>
+                <span className="absolute top-3.5 right-3.5 font-serif text-xs text-[#d4af37]/40">
+                  {e.num}
+                </span>
+                <span className="flex h-9 w-9 items-center justify-center border border-[#d4af37]/35 bg-[#d4af37]/[0.06]">
+                  <A className="h-4 w-4 text-[#d4af37]" strokeWidth={1.5} />
+                </span>
+                <div className="mt-4 font-serif text-[17px] leading-tight text-[#f4efe6]">{e.value}</div>
+                <div className="mt-1.5 font-sans text-[11px] font-light leading-snug text-[#e6dfd5]/60">
+                  {e.label}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="relative hidden sm:block rounded-none border border-[#d4af37]/30 bg-[#121015]/90 backdrop-blur-2xl p-6 sm:p-7">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 lg:divide-x divide-[rgba(212,175,55,0.18)]">
             {c.map((e, t) => (
               <div

@@ -133,8 +133,8 @@ function Footer({ hideInquiryBanner: t } = {}) {
         </div>
       )}
       <div className="mx-auto w-full max-w-7xl px-6 pt-10 pb-16 sm:px-8 sm:pt-12 sm:pb-20 lg:px-12 border-t border-white/[0.08]">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr] lg:gap-10 xl:gap-14">
-          <Reveal>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1.3fr] lg:gap-10 xl:gap-14">
+          <Reveal className="col-span-2 sm:col-span-1">
             <div className="max-w-[420px]">
               <Link href="/" className="group inline-block">
                 <span className="font-serif text-[26px] font-normal tracking-[0.18em] text-[#f4f0e8] transition-colors duration-300 group-hover:text-[#c8a951]">
@@ -171,7 +171,7 @@ function Footer({ hideInquiryBanner: t } = {}) {
               <h3 className="font-sans text-[9.5px] font-medium uppercase tracking-[0.28em] text-[#c8a951]">
                 The Spaces
               </h3>
-              <ul className="mt-6 space-y-3.5">
+              <ul className="mt-5 space-y-3 sm:mt-6 sm:space-y-3.5">
                 {f.map((t) => (
                   <li key={t.label}>
                     <Link
@@ -191,7 +191,7 @@ function Footer({ hideInquiryBanner: t } = {}) {
               <h3 className="font-sans text-[9.5px] font-medium uppercase tracking-[0.28em] text-[#c8a951]">
                 Pages
               </h3>
-              <ul className="mt-6 space-y-3.5">
+              <ul className="mt-5 space-y-3 sm:mt-6 sm:space-y-3.5">
                 {g.map((t) => (
                   <li key={t.label}>
                     <Link
@@ -206,7 +206,7 @@ function Footer({ hideInquiryBanner: t } = {}) {
               </ul>
             </div>
           </Reveal>
-          <Reveal delay={240}>
+          <Reveal delay={240} className="col-span-2 sm:col-span-1">
             <div>
               <h3 className="font-sans text-[9.5px] font-medium uppercase tracking-[0.28em] text-[#c8a951]">
                 How to Reach Us
