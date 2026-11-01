@@ -65,14 +65,6 @@ let b = [
       caption: "Blue underwater lights make the pool glow at night.",
     },
     {
-      id: "pool-celebration",
-      src: "/images/bungalow/pool-party-celebration.png",
-      title: "Evening by the Pool",
-      category: "Pool & Deck",
-      aspect: "portrait",
-      caption: "Easy to move from inside to the pool for drinks and pool parties.",
-    },
-    {
       id: "pool-day",
       src: "/images/bungalow/pool-day-pergola.jpg",
       title: "Pool in the Daytime",
@@ -232,38 +224,6 @@ let b = [
       aspect: "landscape",
       caption: "A lawn for family games and kids' play.",
     },
-    {
-      id: "guest-snooker-aim",
-      src: "/images/bungalow/revel-guest-snooker-aim.jpg",
-      title: "Lining Up a Shot",
-      category: "Party Room & Bar",
-      aspect: "portrait",
-      caption: "A guest lining up a shot at the snooker table.",
-    },
-    {
-      id: "guests-snooker-friends",
-      src: "/images/bungalow/revel-guests-snooker-friends.jpg",
-      title: "Snooker with Friends",
-      category: "Party Room & Bar",
-      aspect: "portrait",
-      caption: "Friends playing snooker in the party room.",
-    },
-    {
-      id: "guests-lounge-cheers",
-      src: "/images/bungalow/revel-guests-lounge-cheers.jpg",
-      title: "Drinks in the Lounge",
-      category: "Party Room & Bar",
-      aspect: "portrait",
-      caption: "Guests relaxing on the party room sofas.",
-    },
-    {
-      id: "guests-bar-counter",
-      src: "/images/bungalow/revel-guests-bar-counter.jpg",
-      title: "At the Bar",
-      category: "Party Room & Bar",
-      aspect: "portrait",
-      caption: "Guests at the bar counter in the party room.",
-    },
     ...galleryPhotos,
   ],
   x = [
@@ -294,10 +254,6 @@ let b = [
     {
       label: "Kids Play Area",
       count: b.filter((e) => "Kids Play Area" === e.category).length,
-    },
-    {
-      label: "Guest Moments",
-      count: b.filter((e) => "Guest Moments" === e.category).length,
     },
   ];
 export const GalleryClient = function () {
