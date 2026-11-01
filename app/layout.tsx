@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
+import { FloatingInstagram } from "@/components/floating-instagram";
 import { MobileBottomNav } from "@/components/mobile-bottom-nav";
 import "./globals.css";
 
@@ -36,6 +37,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         className="min-h-full flex flex-col font-sans bg-[#08080a] text-[#f4efe6] pb-16 md:pb-0"
       >
         {children}
+        <FloatingInstagram />
         <MobileBottomNav />
       </body>
     </html>

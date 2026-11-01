@@ -19,6 +19,21 @@ let r = [
     quote:
       "Most villas in Lonavala have strict noise rules or shared gates. Casa Brio is different: a great sound system, foosball, snooker and a private cricket turf inside the villa. The staff took care of everything, from ice to mixers.",
   },
+  {
+    author: "Priya Nair",
+    quote:
+      "We came for my mother's 60th birthday with three generations of the family. The kids loved the pool and the play area, and the grandparents loved the quiet rooms with mountain views. The chef cooked simple home-style food for everyone. Very relaxing stay.",
+  },
+  {
+    author: "Karan Mehta",
+    quote:
+      "Did my bachelor party here with 14 friends. The party room was the best part: snooker, music and drinks till late, and nobody complained about the noise. Cricket under the floodlights the next day was a lot of fun. We are already planning to come back.",
+  },
+  {
+    author: "Ananya & Rahul Desai",
+    quote:
+      "Booking was easy and the team answered all our questions on WhatsApp. The villa looked exactly like the photos, very clean, and the rooms were big. Waking up to the misty hills and having breakfast on the terrace was beautiful.",
+  },
 ];
 function L({ target: e, decimals: s = 0, prefix: n = "", suffix: i = "", duration: r = 2e3 }) {
   let [o, d] = useState(0),

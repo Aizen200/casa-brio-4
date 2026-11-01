@@ -8,7 +8,13 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/footer";
+import { FramePhoto } from "@/components/lightbox";
+import { galleryPhotos } from "@/components/gallery-photos";
 let P = Maximize2;
+// How many photos the grid shows at first, and adds each time "Load more" is clicked.
+const PAGE_SIZE = 24;
+// How many thumbnails the full-screen viewer shows on each side of the current photo.
+const THUMB_RADIUS = 5;
 let b = [
     {
       id: "facade-drone",
@@ -226,6 +232,39 @@ let b = [
       aspect: "landscape",
       caption: "A lawn for family games and kids' play.",
     },
+    {
+      id: "guest-snooker-aim",
+      src: "/images/bungalow/revel-guest-snooker-aim.jpg",
+      title: "Lining Up a Shot",
+      category: "Party Room & Bar",
+      aspect: "portrait",
+      caption: "A guest lining up a shot at the snooker table.",
+    },
+    {
+      id: "guests-snooker-friends",
+      src: "/images/bungalow/revel-guests-snooker-friends.jpg",
+      title: "Snooker with Friends",
+      category: "Party Room & Bar",
+      aspect: "portrait",
+      caption: "Friends playing snooker in the party room.",
+    },
+    {
+      id: "guests-lounge-cheers",
+      src: "/images/bungalow/revel-guests-lounge-cheers.jpg",
+      title: "Drinks in the Lounge",
+      category: "Party Room & Bar",
+      aspect: "portrait",
+      caption: "Guests relaxing on the party room sofas.",
+    },
+    {
+      id: "guests-bar-counter",
+      src: "/images/bungalow/revel-guests-bar-counter.jpg",
+      title: "At the Bar",
+      category: "Party Room & Bar",
+      aspect: "portrait",
+      caption: "Guests at the bar counter in the party room.",
+    },
+    ...galleryPhotos,
   ],
   x = [
     {
@@ -248,11 +287,24 @@ let b = [
       label: "Cricket Turf",
       count: b.filter((e) => "Cricket Turf" === e.category).length,
     },
+    {
+      label: "Exterior & Views",
+      count: b.filter((e) => "Exterior & Views" === e.category).length,
+    },
+    {
+      label: "Kids Play Area",
+      count: b.filter((e) => "Kids Play Area" === e.category).length,
+    },
+    {
+      label: "Guest Moments",
+      count: b.filter((e) => "Guest Moments" === e.category).length,
+    },
   ];
 export const GalleryClient = function () {
   let [e, d] = useState("All"),
     [u, y] = useState(null),
-    [v, w] = useState(b);
+    [v, w] = useState(b),
+    [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   useEffect(() => {
     w(
       (function (e) {
@@ -321,15 +373,15 @@ export const GalleryClient = function () {
                     </p>
                   </Reveal>
                 </div>
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-5xl mx-auto">
                   <Reveal delay={0.3}>
-                    <div className="mt-8 -mx-6 flex w-[calc(100%+3rem)] items-center justify-start gap-2 overflow-x-auto no-scrollbar px-6 py-1 sm:mx-0 sm:w-full sm:justify-center sm:gap-2.5 sm:px-1">
+                    <div className="mt-8 -mx-6 flex w-[calc(100%+3rem)] items-center justify-start gap-2 overflow-x-auto no-scrollbar px-6 py-1 sm:mx-0 sm:w-full sm:flex-wrap sm:justify-center sm:gap-2.5 sm:overflow-x-visible sm:px-1">
                       {x.map((r) => {
                         let i = e === r.label;
                         return (
                           <button
                             onClick={() => {
-                              (d(r.label), y(null));
+                              (d(r.label), y(null), setVisibleCount(PAGE_SIZE));
                             }}
                             className={`group inline-flex shrink-0 whitespace-nowrap items-center gap-2 border px-4 sm:px-4.5 py-2 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.15em] sm:tracking-[0.18em] transition-all duration-300 ${i ? "border-[#d4af37] bg-[#d4af37] text-[#08080a]" : "border-[rgba(212,175,55,0.2)] bg-[#121015] text-[#e6dfd5]/80 hover:border-[#d4af37] hover:text-[#d4af37]"}`}
                             key={r.label}
@@ -350,15 +402,17 @@ export const GalleryClient = function () {
             </div>
           </section>
           <section className="relative mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-12 pb-20 sm:pb-24">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[240px] gap-4 sm:gap-5">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:auto-rows-[240px] lg:grid-flow-row-dense gap-4 sm:gap-5">
               <AnimatePresence mode="popLayout">
-                {j.map((e, r) => {
+                {j.slice(0, visibleCount).map((e, r) => {
                   let a = r % 8,
                     o = "lg:col-span-1 lg:row-span-1";
                   return (
                     0 === a || 7 === a
                       ? (o = "lg:col-span-2 lg:row-span-2")
                       : (3 === a || 6 === a) && (o = "lg:col-span-2 lg:row-span-1"),
+                    // Tall photos get a tall tile so heads and faces are not cropped off.
+                    "portrait" === e.aspect && (o = "lg:col-span-1 lg:row-span-2"),
                     (
                       <motion.div
                         layout={!0}
@@ -378,7 +432,7 @@ export const GalleryClient = function () {
                           duration: 0.35,
                           delay: (r % 8) * 0.03,
                         }}
-                        className={`group relative h-[260px] sm:h-[290px] lg:h-full w-full overflow-hidden rounded-none border border-[rgba(212,175,55,0.22)] bg-[#121015] cursor-pointer transition-all duration-300 hover:border-[#d4af37] shadow-lg hover:shadow-[0_12px_36px_rgba(0,0,0,0.85)] ${o}`}
+                        className={`group relative ${"portrait" === e.aspect ? "h-[520px] sm:h-[500px]" : "h-[260px] sm:h-[290px]"} lg:h-full w-full overflow-hidden rounded-none border border-[rgba(212,175,55,0.22)] bg-[#121015] cursor-pointer transition-all duration-300 hover:border-[#d4af37] shadow-lg hover:shadow-[0_12px_36px_rgba(0,0,0,0.85)] ${o}`}
                         onClick={() => {
                           y(r);
                         }}
@@ -386,9 +440,17 @@ export const GalleryClient = function () {
                       >
                         <Image
                           src={e.src}
+                          alt=""
+                          aria-hidden={!0}
+                          fill={!0}
+                          className="scale-110 object-cover blur-xl brightness-50"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                        />
+                        <Image
+                          src={e.src}
                           alt={e.title}
                           fill={!0}
-                          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                          className="object-contain transition-transform duration-700 ease-out group-hover:scale-105"
                           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
                         />
                         <div className="absolute inset-0 bg-black/25 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -401,6 +463,20 @@ export const GalleryClient = function () {
                 })}
               </AnimatePresence>
             </div>
+            {visibleCount < j.length && (
+              <div className="mt-10 flex flex-col items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => setVisibleCount((e) => e + PAGE_SIZE)}
+                  className="inline-flex items-center gap-2 border border-[#d4af37] px-6 py-3 text-xs font-semibold uppercase tracking-[0.18em] text-[#d4af37] transition-all duration-300 hover:bg-[#d4af37] hover:text-[#08080a]"
+                >
+                  Load more
+                </button>
+                <p className="font-sans text-xs text-[#a39c93]">
+                  Showing {visibleCount} of {j.length} photos
+                </p>
+              </div>
+            )}
           </section>
           <AnimatePresence>
             {null !== u && (
@@ -460,33 +536,31 @@ export const GalleryClient = function () {
                   className="relative max-h-[60vh] sm:max-h-[72vh] max-w-[92vw] sm:max-w-[80vw] lg:max-w-[70vw] w-full aspect-[16/10] overflow-hidden rounded-none border border-amber-500/20 shadow-[0_0_50px_rgba(0,0,0,0.9)]"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <Image
-                    src={j[u]?.src}
-                    alt={j[u]?.title}
-                    fill={!0}
-                    priority={!0}
-                    className="object-contain"
-                    sizes="(max-width: 1440px) 90vw, 1200px"
-                  />
+                  <FramePhoto src={j[u]?.src} alt={j[u]?.title} key={j[u]?.src} />
                 </div>
                 <div
                   className="absolute bottom-4 sm:bottom-6 inset-x-3 sm:inset-x-8 z-20 flex items-center justify-start sm:justify-center gap-2 sm:gap-2.5 overflow-x-auto scrollbar-none py-2 px-2"
                   onClick={(e) => e.stopPropagation()}
                 >
-                  {j.map((e, r) => (
+                  {j.map((e, r) => {
+                    if (Math.abs(r - u) > THUMB_RADIUS) return null;
+                    return (
                     <button
                       type="button"
                       onClick={() => y(r)}
                       className={`relative h-12 w-16 sm:h-14 sm:w-20 overflow-hidden border transition-all duration-300 cursor-pointer shrink-0 rounded-none ${r === u ? "border-[#d4af37] scale-105 shadow-[0_0_12px_rgba(212,175,55,0.6)] ring-1 ring-[#d4af37]" : "border-white/20 opacity-50 hover:opacity-100 hover:border-white/50"}`}
                       key={e.id}
                     >
-                      <img
+                      <Image
                         src={e.src}
                         alt={e.title}
-                        className="h-full w-full object-cover object-center"
+                        fill={!0}
+                        sizes="80px"
+                        className="object-cover object-center"
                       />
                     </button>
-                  ))}
+                    );
+                  })}
                 </div>
               </motion.div>
             )}

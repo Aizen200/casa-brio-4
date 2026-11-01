@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/reveal";
-import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { AnimatePresence } from "framer-motion";
+import { Lightbox } from "@/components/lightbox";
+import { ArrowRight, ChevronRight } from "lucide-react";
 let c = [
   {
     title: "Party Room & Bar",
@@ -224,36 +225,21 @@ function EstateFeatures() {
       </div>
       <AnimatePresence>
         {null !== e && (
-          <G
-            feature={c[e.featureIdx]}
-            currentImageIdx={e.imageIdx}
-            onClose={() => {
-              s(null);
-            }}
-            onNext={(a) => {
-              if ((a && a.stopPropagation(), !e)) return;
-              let t = c[e.featureIdx],
-                n = (e.imageIdx + 1) % t.images.length;
-              s({
-                ...e,
-                imageIdx: n,
-              });
-            }}
-            onPrev={(a) => {
-              if ((a && a.stopPropagation(), !e)) return;
-              let t = c[e.featureIdx],
-                n = (e.imageIdx - 1 + t.images.length) % t.images.length;
-              s({
-                ...e,
-                imageIdx: n,
-              });
-            }}
-            onSelectImage={(a) =>
+          <Lightbox
+            images={c[e.featureIdx].images.map((t) => ({
+              ...t,
+              label: c[e.featureIdx].title,
+            }))}
+            index={e.imageIdx}
+            onIndexChange={(a) =>
               s({
                 ...e,
                 imageIdx: a,
               })
             }
+            onClose={() => {
+              s(null);
+            }}
           />
         )}
       </AnimatePresence>
@@ -336,144 +322,6 @@ function X_({ item: e, featureIdx: s, onOpenModal: i, isMobile: l }) {
     </div>
   );
   return l ? g : <Reveal delay={80 * s}>{g}</Reveal>;
-}
-function G({ feature: e, currentImageIdx: t, onClose: r, onNext: d, onPrev: c, onSelectImage: m }) {
-  let x = e.images[t],
-    h = e.images.length;
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 md:p-10">
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        exit={{
-          opacity: 0,
-        }}
-        onClick={r}
-        className="absolute inset-0 bg-black/90 backdrop-blur-md"
-      />
-      <motion.div
-        initial={{
-          opacity: 0,
-          scale: 0.95,
-          y: 15,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          y: 0,
-        }}
-        exit={{
-          opacity: 0,
-          scale: 0.95,
-          y: 15,
-        }}
-        transition={{
-          duration: 0.28,
-          ease: "easeOut",
-        }}
-        className="relative z-10 flex flex-col w-full max-w-6xl max-h-[94vh] overflow-hidden rounded-none border border-[#d4af37] bg-[#0c0a10] shadow-[0_25px_80px_rgba(0,0,0,0.95)]"
-      >
-        <div className="flex items-center justify-between border-b border-[rgba(212,175,55,0.2)] bg-[#121015] px-5 sm:px-6 py-3.5 sm:py-4 gap-4">
-          <div className="flex items-center shrink-0">
-            <h3 className="font-serif text-lg sm:text-2xl text-[#f4efe6] whitespace-nowrap">
-              {e.title}
-            </h3>
-          </div>
-          <div className="flex items-center gap-4 sm:gap-6 min-w-0 justify-end">
-            <p className="hidden md:block text-right font-sans text-xs font-light text-[#e6dfd5]/85 whitespace-nowrap truncate">
-              {x.caption || e.description}
-            </p>
-            <button
-              onClick={r}
-              aria-label="Close dialog"
-              className="flex h-9 w-9 sm:h-9 sm:w-9 items-center justify-center border border-[rgba(212,175,55,0.4)] bg-[#08080a] text-[#f4efe6] transition-colors hover:bg-[#d4af37] hover:text-[#08080a] shrink-0"
-            >
-              <X className="h-4 w-4" />
-            </button>
-          </div>
-        </div>
-        <div className="relative w-full h-[52vh] sm:h-[60vh] md:h-[64vh] bg-black overflow-hidden">
-          <div className="absolute top-4 left-4 z-20 pointer-events-none">
-            <span className="border border-[rgba(212,175,55,0.5)] bg-[#08080a]/90 backdrop-blur-md px-3 sm:px-3.5 py-1 sm:py-1.5 text-[9.5px] sm:text-[10.5px] font-semibold uppercase tracking-[0.2em] text-[#d4af37] shadow-[0_4px_16px_rgba(0,0,0,0.8)]">
-              {e.category}
-            </span>
-          </div>
-          <AnimatePresence mode="wait">
-            <motion.img
-              src={x.src}
-              alt={x.alt}
-              initial={{
-                opacity: 0,
-                scale: 1.04,
-              }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-              }}
-              exit={{
-                opacity: 0,
-                scale: 0.98,
-              }}
-              transition={{
-                duration: 0.35,
-                ease: "easeInOut",
-              }}
-              className="h-full w-full object-cover object-center"
-              key={x.src}
-            />
-          </AnimatePresence>
-          {h > 1 && (
-            <button
-              type="button"
-              onClick={c}
-              aria-label="Previous photo"
-              className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 z-30 flex h-11 w-11 sm:h-13 sm:w-13 items-center justify-center rounded-full border border-[#d4af37] bg-black/80 text-[#f5d77f] backdrop-blur-md transition-all duration-300 hover:border-[#f5d77f] hover:bg-[#d4af37] hover:text-[#08080a] hover:scale-110 active:scale-95 shadow-[0_4px_24px_rgba(0,0,0,0.9)] cursor-pointer"
-            >
-              <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 stroke-[2.2]" />
-            </button>
-          )}
-          {h > 1 && (
-            <button
-              type="button"
-              onClick={d}
-              aria-label="Next photo"
-              className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 z-30 flex h-11 w-11 sm:h-13 sm:w-13 items-center justify-center rounded-full border border-[#d4af37] bg-black/80 text-[#f5d77f] backdrop-blur-md transition-all duration-300 hover:border-[#f5d77f] hover:bg-[#d4af37] hover:text-[#08080a] hover:scale-110 active:scale-95 shadow-[0_4px_24px_rgba(0,0,0,0.9)] cursor-pointer"
-            >
-              <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 stroke-[2.2]" />
-            </button>
-          )}
-        </div>
-        <div className="border-t border-[rgba(212,175,55,0.2)] bg-[#121015] p-4 sm:p-5 flex flex-col items-center justify-center gap-3">
-          <div className="md:hidden text-center max-w-lg">
-            <p className="font-sans text-xs font-light leading-relaxed text-[#e6dfd5]/90">
-              {x.caption || e.description}
-            </p>
-          </div>
-          {h > 1 && (
-            <div className="flex items-center justify-center gap-2.5 sm:gap-3.5 overflow-x-auto max-w-full pb-1">
-              {e.images.map((e, s) => (
-                <button
-                  onClick={() => m(s)}
-                  className={`relative h-12 w-16 sm:h-14 sm:w-20 overflow-hidden border transition-all duration-300 cursor-pointer shrink-0 ${s === t ? "border-[#d4af37] scale-105 shadow-[0_0_12px_rgba(212,175,55,0.5)] ring-1 ring-[#d4af37]" : "border-white/20 opacity-50 hover:opacity-100 hover:border-white/50"}`}
-                  key={e.src}
-                >
-                  <img
-                    src={e.src}
-                    alt={e.alt}
-                    className="h-full w-full object-cover object-center"
-                  />
-                </button>
-              ))}
-            </div>
-          )}
-        </div>
-      </motion.div>
-    </div>
-  );
 }
 export { EstateFeatures };
 export default EstateFeatures;

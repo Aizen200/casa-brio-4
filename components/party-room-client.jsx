@@ -1,8 +1,9 @@
 "use client";
 
-import { ArrowRight, ChevronDown, X } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import { useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring, useTransform } from "framer-motion";
+import { Lightbox } from "@/components/lightbox";
 import { SiteHeader } from "@/components/site-header";
 import { Reveal } from "@/components/reveal";
 import {
@@ -198,72 +199,17 @@ function V_() {
           </div>
         </div>
       </div>
-      <AnimatePresence>{e && <J item={e} onClose={() => a(null)} />}</AnimatePresence>
+      <AnimatePresence>
+        {e && (
+          <Lightbox
+            images={b.map((t) => ({ src: t.image, alt: t.alt, label: `${t.pillLabel} · Party Room` }))}
+            index={Math.max(0, b.indexOf(e))}
+            onIndexChange={(t) => a(b[t])}
+            onClose={() => a(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
-  );
-}
-function J({ item: e, onClose: t }) {
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-8">
-      <motion.div
-        initial={{
-          opacity: 0,
-        }}
-        animate={{
-          opacity: 1,
-        }}
-        exit={{
-          opacity: 0,
-        }}
-        onClick={t}
-        className="absolute inset-0 bg-black/90 backdrop-blur-md"
-      />
-      <motion.div
-        initial={{
-          opacity: 0,
-          scale: 0.94,
-          y: 15,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-          y: 0,
-        }}
-        exit={{
-          opacity: 0,
-          scale: 0.94,
-          y: 15,
-        }}
-        transition={{
-          duration: 0.25,
-          ease: "easeOut",
-        }}
-        className="relative z-10 max-h-[92vh] max-w-4xl overflow-hidden rounded-none border border-[#d4af37] bg-[#0c0a10] shadow-[0_30px_90px_rgba(0,0,0,0.95)]"
-      >
-        <button
-          onClick={t}
-          aria-label="Close dialog"
-          className="absolute top-4 right-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(212,175,55,0.4)] bg-[#121015]/90 text-[#f4efe6] transition-colors hover:bg-[#d4af37] hover:text-[#08080a]"
-        >
-          <X className="h-4 w-4" />
-        </button>
-        <div className="relative aspect-[4/3] sm:aspect-[16/10] w-full max-h-[85vh] overflow-hidden bg-black">
-          <img src={e.image} alt={e.alt} className="h-full w-full object-cover" />
-        </div>
-        <div className="p-4 sm:p-5 flex items-center justify-between bg-[#121015] border-t border-[rgba(212,175,55,0.2)]">
-          <span className="font-serif text-lg text-[#f4efe6]">
-            {e.pillLabel}
-            {" · Party Room"}
-          </span>
-          <a
-            href="/contact"
-            className="inline-flex items-center gap-2 rounded-none border border-[#d4af37] bg-transparent px-5 py-2 text-xs font-semibold uppercase tracking-wider text-[#d4af37] transition-all hover:bg-[#d4af37] hover:text-[#08080a]"
-          >
-            Book Now
-          </a>
-        </div>
-      </motion.div>
-    </div>
   );
 }
 let w = [

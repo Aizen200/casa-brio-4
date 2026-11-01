@@ -254,6 +254,23 @@ export const InfinityIcon = function ({ className: e = "h-7 w-7 text-[#d4af37]" 
     </svg>
   );
 };
+export const InstagramIcon = function ({ className: e = "h-7 w-7 text-[#d4af37]" }) {
+  return (
+    <svg
+      viewBox="0 0 32 32"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className={e}
+    >
+      <rect x="5" y="5" width="22" height="22" rx="6" />
+      <circle cx="16" cy="16" r="5" />
+      <path d="M22.5 9.5h.01" />
+    </svg>
+  );
+};
 export const ItalianWashroomIcon = function ({ className: e = "h-7 w-7 text-[#d4af37]" }) {
   return (
     <svg
