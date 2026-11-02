@@ -388,7 +388,7 @@ export const GalleryClient = function () {
                           duration: 0.35,
                           delay: (r % 8) * 0.03,
                         }}
-                        className={`group relative ${"portrait" === e.aspect ? "h-[520px] sm:h-[500px]" : "h-[260px] sm:h-[290px]"} lg:h-full w-full overflow-hidden rounded-none border border-[rgba(212,175,55,0.22)] bg-transparent cursor-pointer transition-all duration-300 hover:border-[#d4af37] shadow-lg hover:shadow-[0_12px_36px_rgba(0,0,0,0.85)] ${o}`}
+                        className={`group relative ${"portrait" === e.aspect ? "h-[520px] sm:h-[500px]" : "h-[260px] sm:h-[290px]"} lg:h-full w-full overflow-hidden rounded-none border border-[rgba(212,175,55,0.22)] bg-white/[0.06] cursor-pointer transition-all duration-300 hover:border-[#d4af37] shadow-lg hover:shadow-[0_12px_36px_rgba(0,0,0,0.85)] ${o}`}
                         onClick={() => {
                           y(r);
                         }}
@@ -481,7 +481,7 @@ export const GalleryClient = function () {
                   <ChevronRight className="h-6 w-6 text-[#f5d77f]" />
                 </button>
                 <div
-                  className="relative max-h-[60vh] sm:max-h-[72vh] max-w-[92vw] sm:max-w-[80vw] lg:max-w-[70vw] w-full aspect-[16/10] overflow-hidden rounded-none border border-amber-500/20 shadow-[0_0_50px_rgba(0,0,0,0.9)]"
+                  className="relative max-h-[60vh] sm:max-h-[72vh] max-w-[92vw] sm:max-w-[80vw] lg:max-w-[70vw] w-full aspect-[16/10] overflow-hidden rounded-none border border-amber-500/20 bg-white/[0.06] shadow-[0_0_50px_rgba(0,0,0,0.9)]"
                   onClick={(e) => e.stopPropagation()}
                 >
                   <FramePhoto src={j[u]?.src} alt={j[u]?.title} key={j[u]?.src} />

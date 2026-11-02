@@ -101,7 +101,7 @@ export const Lightbox = function ({ images: e, index: t, onIndexChange: n, onClo
         }}
       >
         <div
-          className="relative max-h-[60vh] sm:max-h-[72vh] max-w-[92vw] sm:max-w-[80vw] lg:max-w-[70vw] w-full aspect-[16/10] overflow-hidden rounded-none border border-amber-500/20 shadow-[0_0_50px_rgba(0,0,0,0.9)]"
+          className="relative max-h-[60vh] sm:max-h-[72vh] max-w-[92vw] sm:max-w-[80vw] lg:max-w-[70vw] w-full aspect-[16/10] overflow-hidden rounded-none border border-amber-500/20 bg-white/[0.06] shadow-[0_0_50px_rgba(0,0,0,0.9)]"
           onClick={(e) => e.stopPropagation()}
         >
           <FramePhoto src={a.src} alt={a.alt || ""} key={a.src} />
