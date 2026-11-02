@@ -5,20 +5,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
-// Shows the whole photo, uncropped, with a blurred copy of it filling the rest of the frame.
-// The sharp layer loads the high-quality copy from /images/full.
+// Shows the whole photo, uncropped, with nothing behind it.
+// Loads the high-quality copy from /images/full.
 export const FramePhoto = function ({ src: e, alt: t }) {
   let n = `/images/full/${e.split("/").pop().replace(/\.\w+$/, "")}.jpg`;
   return (
     <>
-      <Image
-        src={e}
-        alt=""
-        aria-hidden={!0}
-        fill={!0}
-        sizes="200px"
-        className="scale-110 object-cover blur-2xl brightness-50"
-      />
       <Image
         src={n}
         alt={t}

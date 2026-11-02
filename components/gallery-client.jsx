@@ -388,20 +388,12 @@ export const GalleryClient = function () {
                           duration: 0.35,
                           delay: (r % 8) * 0.03,
                         }}
-                        className={`group relative ${"portrait" === e.aspect ? "h-[520px] sm:h-[500px]" : "h-[260px] sm:h-[290px]"} lg:h-full w-full overflow-hidden rounded-none border border-[rgba(212,175,55,0.22)] bg-[#121015] cursor-pointer transition-all duration-300 hover:border-[#d4af37] shadow-lg hover:shadow-[0_12px_36px_rgba(0,0,0,0.85)] ${o}`}
+                        className={`group relative ${"portrait" === e.aspect ? "h-[520px] sm:h-[500px]" : "h-[260px] sm:h-[290px]"} lg:h-full w-full overflow-hidden rounded-none border border-[rgba(212,175,55,0.22)] bg-transparent cursor-pointer transition-all duration-300 hover:border-[#d4af37] shadow-lg hover:shadow-[0_12px_36px_rgba(0,0,0,0.85)] ${o}`}
                         onClick={() => {
                           y(r);
                         }}
                         key={e.id}
                       >
-                        <Image
-                          src={e.src}
-                          alt=""
-                          aria-hidden={!0}
-                          fill={!0}
-                          className="scale-110 object-cover blur-xl brightness-50"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
-                        />
                         <Image
                           src={e.src}
                           alt={e.title}
