@@ -19,25 +19,25 @@ let b = [
   {
     id: "snooker-aim",
     pillLabel: "Snooker Time",
-    image: "/images/bungalow/revel-guest-snooker-aim.jpg",
+    image: "/images/bungalow/party-room-guest-snooker-aim.jpg",
     alt: "Guest taking a shot at the snooker table in the party room",
   },
   {
     id: "lounge-cheers",
     pillLabel: "Cheers",
-    image: "/images/bungalow/revel-guests-lounge-cheers.jpg",
+    image: "/images/bungalow/party-room-guests-lounge-cheers.jpg",
     alt: "Guests laughing and having drinks on leather sofas in the party room",
   },
   {
     id: "bar-counter",
     pillLabel: "Private Bar",
-    image: "/images/bungalow/revel-guests-bar-counter.jpg",
+    image: "/images/bungalow/party-room-guests-bar-counter.jpg",
     alt: "Guests chatting at the lit-up private bar",
   },
   {
     id: "snooker-friends",
     pillLabel: "Late-Night Snooker",
-    image: "/images/bungalow/revel-guests-snooker-friends.jpg",
+    image: "/images/bungalow/party-room-guests-snooker-friends.jpg",
     alt: "Friends around the snooker table at night",
   },
 ];
@@ -214,19 +214,19 @@ function V_() {
 }
 let w = [
     {
-      src: "/images/bungalow/revel-guest-snooker-aim.jpg",
+      src: "/images/bungalow/party-room-guest-snooker-aim.jpg",
       alt: "Snooker shot in the party room",
     },
     {
-      src: "/images/bungalow/revel-guests-lounge-cheers.jpg",
+      src: "/images/bungalow/party-room-guests-lounge-cheers.jpg",
       alt: "Guests on leather sofas",
     },
     {
-      src: "/images/bungalow/revel-guests-bar-counter.jpg",
+      src: "/images/bungalow/party-room-guests-bar-counter.jpg",
       alt: "Private bar counter",
     },
     {
-      src: "/images/bungalow/revel-guests-snooker-friends.jpg",
+      src: "/images/bungalow/party-room-guests-snooker-friends.jpg",
       alt: "Friends at the snooker table",
     },
     {
