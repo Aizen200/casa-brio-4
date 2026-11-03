@@ -34,7 +34,7 @@ let i = [
   },
   {
     icon: LuxurySuitesIcon,
-    label: "4 Master Suites",
+    label: "6 Master Suites",
     detail: "Mountain views and attached bathrooms",
   },
   {

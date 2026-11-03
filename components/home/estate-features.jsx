@@ -94,7 +94,7 @@ let c = [
     title: "Bedrooms with a View",
     category: "MOUNTAIN VIEWS",
     description:
-      "4 large bedrooms with big glass windows that look out at the misty Sahyadri hills.",
+      "6 large bedrooms with big glass windows that look out at the misty Sahyadri hills.",
     images: [
       {
         src: "/images/bungalow/master-suite-view.jpg",

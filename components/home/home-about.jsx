@@ -39,7 +39,7 @@ function HomeAbout() {
                   </div>
                   <div>
                     <div className="font-serif text-2xl sm:text-3xl text-[#d4af37]">
-                      4 Master Suites
+                      6 Master Suites
                     </div>
                     <div className="font-sans text-xs text-[#a39c93] uppercase tracking-wider mt-1">
                       Mountain Views
