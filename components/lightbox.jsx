@@ -59,7 +59,7 @@ export const Lightbox = function ({ images: e, index: t, onIndexChange: n, onClo
       role="dialog"
       aria-modal="true"
       aria-label={l || "Photo viewer"}
-      className="fixed inset-0 z-[100] flex flex-col bg-black/95 backdrop-blur-2xl"
+      className="fixed inset-0 z-[100] flex flex-col bg-black/60 backdrop-blur-sm"
       onClick={s}
     >
       <div

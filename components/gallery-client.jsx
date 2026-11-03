@@ -438,7 +438,7 @@ export const GalleryClient = function () {
                 exit={{
                   opacity: 0,
                 }}
-                className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-2xl"
+                className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm"
                 onClick={k}
               >
                 <div
