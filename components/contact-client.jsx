@@ -34,7 +34,7 @@ I would like to book the villa:
 - Extras: ${e.addons.join(", ") || "None specified"}`),
     p =
       "mt-2 h-12 w-full border border-[rgba(212,175,55,0.2)] bg-[#121015] px-4 text-sm font-sans font-light text-[#f4efe6] outline-none transition-all placeholder:text-[#a39c93] focus:border-[#d4af37]",
-    v = "block text-[10px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]";
+    v = "block text-[11px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]";
   return (
     <div
       suppressHydrationWarning={!0}
@@ -80,14 +80,14 @@ I would like to book the villa:
                 <div className="border border-white/12 bg-[#101010] p-6 sm:p-8 md:p-10 lg:p-12">
                   <div className="flex items-start justify-between gap-6 border-b border-white/10 pb-8">
                     <div>
-                      <p className="text-[10px] uppercase tracking-[0.25em] text-[#b99a55]">
+                      <p className="text-[11px] uppercase tracking-[0.25em] text-[#b99a55]">
                         Booking Form
                       </p>
                       <h2 className="mt-3 font-serif text-3xl font-normal text-[#f7f3eb] sm:text-4xl">
                         Plan your stay
                       </h2>
                     </div>
-                    <span className="hidden text-[10px] uppercase tracking-[0.2em] text-neutral-600 sm:block">
+                    <span className="hidden text-[11px] uppercase tracking-[0.2em] text-neutral-600 sm:block">
                       Casa Brio
                     </span>
                   </div>
@@ -106,14 +106,14 @@ I would like to book the villa:
                           href={`https://wa.me/919820000000?text=${x}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="group inline-flex items-center gap-3 border-b border-[#b99a55] pb-2 text-[11px] font-medium uppercase tracking-[0.2em] text-[#d0b36d] transition-colors hover:text-white"
+                          className="group inline-flex items-center gap-3 border-b border-[#b99a55] pb-2 text-[12px] font-medium uppercase tracking-[0.2em] text-[#d0b36d] transition-colors hover:text-white"
                         >
                           Continue on WhatsApp
                           <U className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                         </a>
                         <button
                           onClick={() => n(!1)}
-                          className="border-b border-white/20 pb-2 text-[11px] uppercase tracking-[0.2em] text-neutral-400 transition-colors hover:border-white/50 hover:text-white"
+                          className="border-b border-white/20 pb-2 text-[12px] uppercase tracking-[0.2em] text-neutral-400 transition-colors hover:border-white/50 hover:text-white"
                         >
                           Send another request
                         </button>
@@ -127,7 +127,7 @@ I would like to book the villa:
                       className="mt-9 space-y-8"
                     >
                       <div>
-                        <p className="mb-5 text-[10px] uppercase tracking-[0.22em] text-neutral-500">
+                        <p className="mb-5 text-[11px] uppercase tracking-[0.22em] text-neutral-500">
                           Your Details
                         </p>
                         <div className="grid gap-6 sm:grid-cols-2">
@@ -182,7 +182,7 @@ I would like to book the villa:
                         </div>
                       </div>
                       <div className="border-t border-white/8 pt-8">
-                        <p className="mb-5 text-[10px] uppercase tracking-[0.22em] text-neutral-500">
+                        <p className="mb-5 text-[11px] uppercase tracking-[0.22em] text-neutral-500">
                           Your Stay
                         </p>
                         <div className="grid gap-6 sm:grid-cols-2">
@@ -260,7 +260,7 @@ I would like to book the villa:
                         </div>
                       </div>
                       <div className="border-t border-white/8 pt-8">
-                        <p className="mb-5 text-[10px] uppercase tracking-[0.22em] text-neutral-500">
+                        <p className="mb-5 text-[11px] uppercase tracking-[0.22em] text-neutral-500">
                           Extras (Optional)
                         </p>
                         <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
@@ -312,7 +312,7 @@ I would like to book the villa:
                               notes: a.target.value,
                             })
                           }
-                          className="mt-2 w-full resize-none border border-white/15 bg-[#111112] px-4 py-4 text-[15px] text-white outline-none transition-all placeholder:text-neutral-600 focus:border-[#b99a55] focus:bg-[#151514]"
+                          className="mt-2 w-full resize-none border border-white/15 bg-[#111112] px-4 py-4 text-[16px] text-white outline-none transition-all placeholder:text-neutral-600 focus:border-[#b99a55] focus:bg-[#151514]"
                         />
                       </div>
                       <div className="flex flex-col gap-5 border-t border-white/8 pt-8 sm:flex-row sm:items-center sm:justify-between">
@@ -328,7 +328,7 @@ I would like to book the villa:
                           transition={{
                             duration: 0.2,
                           }}
-                          className="group flex shrink-0 items-center gap-3 border-b border-[#b99a55] pb-2 text-[11px] font-medium uppercase tracking-[0.22em] text-[#d0b36d] transition-colors hover:text-white"
+                          className="group flex shrink-0 items-center gap-3 border-b border-[#b99a55] pb-2 text-[12px] font-medium uppercase tracking-[0.22em] text-[#d0b36d] transition-colors hover:text-white"
                         >
                           Send Request
                           <U className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -341,7 +341,7 @@ I would like to book the villa:
               <div className="lg:pt-2">
                 <Reveal delay={0.1}>
                   <div>
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-[#b99a55]">
+                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#b99a55]">
                       Talk to Us
                     </p>
                     <h2 className="mt-4 max-w-md font-serif text-3xl font-normal leading-tight text-[#f7f3eb] sm:text-4xl">
@@ -359,7 +359,7 @@ I would like to book the villa:
                       <div className="flex gap-4">
                         <Phone className="mt-1 h-4 w-4 shrink-0 text-[#b99a55]" />
                         <div>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500">
+                          <p className="text-[11px] uppercase tracking-[0.2em] text-neutral-500">
                             Phone
                           </p>
                           <a
@@ -375,7 +375,7 @@ I would like to book the villa:
                       <div className="flex gap-4">
                         <Mail className="mt-1 h-4 w-4 shrink-0 text-[#b99a55]" />
                         <div>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500">
+                          <p className="text-[11px] uppercase tracking-[0.2em] text-neutral-500">
                             Email
                           </p>
                           <a
@@ -391,7 +391,7 @@ I would like to book the villa:
                       <div className="flex gap-4">
                         <M className="mt-1 h-4 w-4 shrink-0 text-[#b99a55]" />
                         <div>
-                          <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500">
+                          <p className="text-[11px] uppercase tracking-[0.2em] text-neutral-500">
                             WhatsApp
                           </p>
                           <a
@@ -413,7 +413,7 @@ I would like to book the villa:
                     <div className="flex gap-4">
                       <MapPin className="mt-1 h-4 w-4 shrink-0 text-[#b99a55]" />
                       <div>
-                        <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-500">
+                        <p className="text-[11px] uppercase tracking-[0.2em] text-neutral-500">
                           Address
                         </p>
                         <p className="mt-3 text-sm leading-6 text-neutral-300">
@@ -431,7 +431,7 @@ I would like to book the villa:
                 </Reveal>
                 <Reveal delay={0.34}>
                   <div className="mt-12 border-t border-white/10 pt-8">
-                    <p className="text-[10px] uppercase tracking-[0.25em] text-[#b99a55]">
+                    <p className="text-[11px] uppercase tracking-[0.25em] text-[#b99a55]">
                       Travel Time
                     </p>
                     <div className="mt-5">
@@ -483,7 +483,7 @@ I would like to book the villa:
             <Reveal>
               <div className="flex flex-col gap-4 pb-8 sm:flex-row sm:items-end sm:justify-between">
                 <div>
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-[#b99a55]">
+                  <p className="text-[11px] uppercase tracking-[0.25em] text-[#b99a55]">
                     Location
                   </p>
                   <h2 className="mt-3 font-serif text-3xl font-normal text-[#f7f3eb] sm:text-4xl">
@@ -494,7 +494,7 @@ I would like to book the villa:
                   href={`https://www.google.com/maps/search/?api=1&query=${o}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 self-start border-b border-[#b99a55] pb-2 text-[11px] font-medium uppercase tracking-[0.2em] text-[#d0b36d] transition-colors hover:text-white sm:self-auto"
+                  className="group inline-flex items-center gap-2 self-start border-b border-[#b99a55] pb-2 text-[12px] font-medium uppercase tracking-[0.2em] text-[#d0b36d] transition-colors hover:text-white sm:self-auto"
                 >
                   Open in Google Maps
                   <U className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />

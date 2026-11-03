@@ -339,12 +339,12 @@ export const GalleryClient = function () {
                             onClick={() => {
                               (d(r.label), y(null), setVisibleCount(PAGE_SIZE));
                             }}
-                            className={`group inline-flex shrink-0 whitespace-nowrap items-center gap-2 border px-4 sm:px-4.5 py-2 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.15em] sm:tracking-[0.18em] transition-all duration-300 ${i ? "border-[#d4af37] bg-[#d4af37] text-[#08080a]" : "border-[rgba(212,175,55,0.2)] bg-[#121015] text-[#e6dfd5]/80 hover:border-[#d4af37] hover:text-[#d4af37]"}`}
+                            className={`group inline-flex shrink-0 whitespace-nowrap items-center gap-2 border px-4 sm:px-4.5 py-2 text-[12px] sm:text-xs font-semibold uppercase tracking-[0.15em] sm:tracking-[0.18em] transition-all duration-300 ${i ? "border-[#d4af37] bg-[#d4af37] text-[#08080a]" : "border-[rgba(212,175,55,0.2)] bg-[#121015] text-[#e6dfd5]/80 hover:border-[#d4af37] hover:text-[#d4af37]"}`}
                             key={r.label}
                           >
                             <span>{r.label}</span>
                             <span
-                              className={`px-1.5 py-0.5 text-[9.5px] sm:text-[10px] font-sans font-semibold ${i ? "bg-[#08080a]/20 text-[#08080a]" : "bg-[#08080a] text-[#a39c93]"}`}
+                              className={`px-1.5 py-0.5 text-[10.5px] sm:text-[11px] font-sans font-semibold ${i ? "bg-[#08080a]/20 text-[#08080a]" : "bg-[#08080a] text-[#a39c93]"}`}
                             >
                               {r.count}
                             </span>

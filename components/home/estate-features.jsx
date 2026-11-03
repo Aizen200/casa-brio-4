@@ -281,7 +281,7 @@ function X_({ item: e, featureIdx: s, onOpenModal: i, isMobile: l }) {
         })}
         <div className="absolute inset-0 bg-gradient-to-t from-[#121015] via-transparent to-transparent pointer-events-none z-10" />
         <div className="absolute top-4 left-4 border border-[rgba(212,175,55,0.35)] bg-[#08080a]/85 px-3 py-1 backdrop-blur-md z-10 pointer-events-none">
-          <span className="font-sans text-[10px] uppercase tracking-widest text-[#d4af37] font-semibold">
+          <span className="font-sans text-[11px] uppercase tracking-widest text-[#d4af37] font-semibold">
             {e.category}
           </span>
         </div>

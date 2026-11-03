@@ -200,7 +200,7 @@ function Journey() {
                       {l.description}
                     </p>
                     <div className="pt-2">
-                      <ul className="space-y-2.5 text-xs sm:text-[13px] font-sans font-light text-[#e6dfd5]/85">
+                      <ul className="space-y-2.5 text-xs sm:text-[14px] font-sans font-light text-[#e6dfd5]/85">
                         {l.highlights.map((e) => (
                           <li className="flex items-center gap-2.5" key={e}>
                             <span className="h-1.5 w-1.5 shrink-0 bg-[#d4af37]" />
@@ -213,7 +213,7 @@ function Journey() {
                 </AnimatePresence>
               </div>
               <div className="pt-6 border-t border-white/10 mt-6 lg:mt-0">
-                <div className="text-[11px] font-sans text-white/40 mb-2.5 uppercase tracking-widest flex items-center justify-between">
+                <div className="text-[12px] font-sans text-white/40 mb-2.5 uppercase tracking-widest flex items-center justify-between">
                   <span>PICK A TIME</span>
                   <span className="text-[#d4af37]">
                     0{e + 1}
@@ -241,7 +241,7 @@ function Journey() {
                           {t.step}
                         </span>
                         <span
-                          className={`text-[11px] font-sans tracking-tight transition-colors line-clamp-1 mt-0.5 ${i ? "text-white font-medium" : "text-white/40 group-hover:text-white/70"}`}
+                          className={`text-[12px] font-sans tracking-tight transition-colors line-clamp-1 mt-0.5 ${i ? "text-white font-medium" : "text-white/40 group-hover:text-white/70"}`}
                         >
                           {t.time}
                         </span>

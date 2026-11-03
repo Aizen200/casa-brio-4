@@ -71,7 +71,7 @@ export const Lightbox = function ({ images: e, index: t, onIndexChange: n, onClo
             {String(t + 1).padStart(2, "0")} / {String(r).padStart(2, "0")}
           </span>
           {(a.label || l) && (
-            <span className="truncate font-sans text-[10px] sm:text-xs uppercase tracking-[0.2em] text-[#d4af37]">
+            <span className="truncate font-sans text-[11px] sm:text-xs uppercase tracking-[0.2em] text-[#d4af37]">
               {a.label || l}
             </span>
           )}

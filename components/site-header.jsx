@@ -33,7 +33,7 @@ function U() {
     <Link href="/" aria-label="Casa Brio" className="group inline-flex items-center">
       <span
         className={
-          "\n          text-[15px]\n          font-semibold\n          tracking-[0.32em]\n          text-white\n          transition-colors\n          duration-300\n          group-hover:text-[#d4af37]\n          sm:text-[17px]\n        "
+          "\n          text-[16px]\n          font-semibold\n          tracking-[0.32em]\n          text-white\n          transition-colors\n          duration-300\n          group-hover:text-[#d4af37]\n          sm:text-[18px]\n        "
         }
       >
         CASA BRIO
@@ -104,7 +104,7 @@ export const SiteHeader = function ({ hideOnInitial: t } = {}) {
                   flex
                   h-[76px]
                   items-center
-                  text-[11px]
+                  text-[12px]
                   font-medium
                   uppercase
                   tracking-[0.22em]
@@ -129,7 +129,7 @@ export const SiteHeader = function ({ hideOnInitial: t } = {}) {
             <Link
               href="/contact"
               className={
-                "\n              inline-flex\n              items-center\n              justify-center\n              border\n              border-[rgba(212,175,55,0.4)]\n              bg-[#121015]/60\n              px-4\n              py-2\n              text-[10px]\n              font-semibold\n              uppercase\n              tracking-[0.2em]\n              text-[#f4efe6]\n              backdrop-blur-md\n              transition-all\n              duration-300\n              hover:border-[#d4af37]\n              hover:bg-[#d4af37]\n              hover:text-[#08080a]\n              hover:shadow-[0_0_15px_rgba(212,175,55,0.35)]\n              active:scale-[0.98]\n            "
+                "\n              inline-flex\n              items-center\n              justify-center\n              border\n              border-[rgba(212,175,55,0.4)]\n              bg-[#121015]/60\n              px-4\n              py-2\n              text-[11px]\n              font-semibold\n              uppercase\n              tracking-[0.2em]\n              text-[#f4efe6]\n              backdrop-blur-md\n              transition-all\n              duration-300\n              hover:border-[#d4af37]\n              hover:bg-[#d4af37]\n              hover:text-[#08080a]\n              hover:shadow-[0_0_15px_rgba(212,175,55,0.35)]\n              active:scale-[0.98]\n            "
               }
             >
               <span>BOOK NOW</span>
@@ -184,7 +184,7 @@ export const SiteHeader = function ({ hideOnInitial: t } = {}) {
                   border-b
                   border-white/[0.06]
                   py-4
-                  text-[11px]
+                  text-[12px]
                   font-medium
                   uppercase
                   tracking-[0.22em]
@@ -208,7 +208,7 @@ export const SiteHeader = function ({ hideOnInitial: t } = {}) {
               href="/contact"
               onClick={() => d(!1)}
               className={
-                "\n              mt-6\n              flex\n              items-center\n              justify-center\n              border\n              border-[rgba(212,175,55,0.4)]\n              bg-[#121015]/60\n              px-4\n              py-3\n              text-[10.5px]\n              font-semibold\n              uppercase\n              tracking-[0.2em]\n              text-[#f4efe6]\n              backdrop-blur-md\n              transition-all\n              duration-300\n              hover:border-[#d4af37]\n              hover:bg-[#d4af37]\n              hover:text-[#08080a]\n              hover:shadow-[0_0_15px_rgba(212,175,55,0.35)]\n              active:scale-[0.98]\n            "
+                "\n              mt-6\n              flex\n              items-center\n              justify-center\n              border\n              border-[rgba(212,175,55,0.4)]\n              bg-[#121015]/60\n              px-4\n              py-3\n              text-[11.5px]\n              font-semibold\n              uppercase\n              tracking-[0.2em]\n              text-[#f4efe6]\n              backdrop-blur-md\n              transition-all\n              duration-300\n              hover:border-[#d4af37]\n              hover:bg-[#d4af37]\n              hover:text-[#08080a]\n              hover:shadow-[0_0_15px_rgba(212,175,55,0.35)]\n              active:scale-[0.98]\n            "
               }
             >
               <span>BOOK NOW</span>

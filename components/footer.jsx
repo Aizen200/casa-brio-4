@@ -137,18 +137,18 @@ function Footer({ hideInquiryBanner: t } = {}) {
           <Reveal className="col-span-2 sm:col-span-1">
             <div className="max-w-[420px]">
               <Link href="/" className="group inline-block">
-                <span className="font-serif text-[26px] font-normal tracking-[0.18em] text-[#f4f0e8] transition-colors duration-300 group-hover:text-[#c8a951]">
+                <span className="font-serif text-[27px] font-normal tracking-[0.18em] text-[#f4f0e8] transition-colors duration-300 group-hover:text-[#c8a951]">
                   CASA BRIO
                 </span>
-                <span className="mt-1 block font-sans text-[8.5px] font-medium uppercase tracking-[0.32em] text-[#c8a951]">
+                <span className="mt-1 block font-sans text-[9.5px] font-medium uppercase tracking-[0.32em] text-[#c8a951]">
                   Private Villa · Lonavala
                 </span>
               </Link>
-              <p className="mt-6 font-sans text-[13px] font-light leading-[1.8] text-white/55 sm:text-[13.5px]">
+              <p className="mt-6 font-sans text-[14px] font-light leading-[1.8] text-white/55 sm:text-[14.5px]">
                 A private villa in Lonavala, close to the Sahyadri hills. Made for families, friends
                 and work teams who want the whole place to themselves.
               </p>
-              <div className="mt-7 flex flex-col gap-3 font-sans text-[12.5px] text-white/60">
+              <div className="mt-7 flex flex-col gap-3 font-sans text-[13.5px] text-white/60">
                 <a
                   href="tel:+917400338525"
                   className="inline-flex items-center gap-2.5 transition-colors hover:text-[#c8a951]"
@@ -168,7 +168,7 @@ function Footer({ hideInquiryBanner: t } = {}) {
           </Reveal>
           <Reveal delay={80}>
             <div>
-              <h3 className="font-sans text-[9.5px] font-medium uppercase tracking-[0.28em] text-[#c8a951]">
+              <h3 className="font-sans text-[10.5px] font-medium uppercase tracking-[0.28em] text-[#c8a951]">
                 The Spaces
               </h3>
               <ul className="mt-5 space-y-3 sm:mt-6 sm:space-y-3.5">
@@ -176,7 +176,7 @@ function Footer({ hideInquiryBanner: t } = {}) {
                   <li key={t.label}>
                     <Link
                       href={t.href}
-                      className="group inline-flex items-center gap-2 font-sans text-[13px] font-light text-white/55 transition-colors duration-300 hover:text-[#faebd0]"
+                      className="group inline-flex items-center gap-2 font-sans text-[14px] font-light text-white/55 transition-colors duration-300 hover:text-[#faebd0]"
                     >
                       <span className="h-px w-0 bg-[#c8a951] transition-all duration-300 group-hover:w-3" />
                       <span>{t.label}</span>
@@ -188,7 +188,7 @@ function Footer({ hideInquiryBanner: t } = {}) {
           </Reveal>
           <Reveal delay={160}>
             <div>
-              <h3 className="font-sans text-[9.5px] font-medium uppercase tracking-[0.28em] text-[#c8a951]">
+              <h3 className="font-sans text-[10.5px] font-medium uppercase tracking-[0.28em] text-[#c8a951]">
                 Pages
               </h3>
               <ul className="mt-5 space-y-3 sm:mt-6 sm:space-y-3.5">
@@ -196,7 +196,7 @@ function Footer({ hideInquiryBanner: t } = {}) {
                   <li key={t.label}>
                     <Link
                       href={t.href}
-                      className="group inline-flex items-center gap-2 font-sans text-[13px] font-light text-white/55 transition-colors duration-300 hover:text-[#faebd0]"
+                      className="group inline-flex items-center gap-2 font-sans text-[14px] font-light text-white/55 transition-colors duration-300 hover:text-[#faebd0]"
                     >
                       <span className="h-px w-0 bg-[#c8a951] transition-all duration-300 group-hover:w-3" />
                       <span>{t.label}</span>
@@ -208,20 +208,20 @@ function Footer({ hideInquiryBanner: t } = {}) {
           </Reveal>
           <Reveal delay={240} className="col-span-2 sm:col-span-1">
             <div>
-              <h3 className="font-sans text-[9.5px] font-medium uppercase tracking-[0.28em] text-[#c8a951]">
+              <h3 className="font-sans text-[10.5px] font-medium uppercase tracking-[0.28em] text-[#c8a951]">
                 How to Reach Us
               </h3>
               <div className="mt-6 rounded-xl border border-white/[0.08] bg-[#0d0c10] p-5 shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
                 <div className="flex items-start gap-3">
                   <MapPin className="mt-1 h-4 w-4 shrink-0 text-[#c8a951]" />
-                  <div className="font-sans text-[12.5px] font-light leading-[1.65] text-white/70">
+                  <div className="font-sans text-[13.5px] font-light leading-[1.65] text-white/70">
                     <p className="font-medium text-[#f4f0e8]">Casa Brio,</p>
                     <p>Tungarli Hill Road,</p>
                     <p>Near Tungarli Lake,</p>
                     <p>Lonavala, Maharashtra 410401</p>
                   </div>
                 </div>
-                <div className="mt-4 border-t border-white/[0.06] pt-3.5 font-sans text-[11.5px] text-white/45">
+                <div className="mt-4 border-t border-white/[0.06] pt-3.5 font-sans text-[12.5px] text-white/45">
                   <p>🚗 About 90 mins from Mumbai (by Expressway)</p>
                   <p className="mt-1">🚗 About 60 mins from Pune (by Expressway)</p>
                 </div>
@@ -229,7 +229,7 @@ function Footer({ hideInquiryBanner: t } = {}) {
                   href="https://www.google.com/maps/search/?api=1&query=Tungarli+Lake+Lonavala+Maharashtra+410401"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-4 inline-flex items-center gap-2 font-sans text-[10px] font-medium uppercase tracking-[0.2em] text-[#d8bd61] transition-colors hover:text-[#faebd0]"
+                  className="mt-4 inline-flex items-center gap-2 font-sans text-[11px] font-medium uppercase tracking-[0.2em] text-[#d8bd61] transition-colors hover:text-[#faebd0]"
                 >
                   <span>Get Directions</span>
                   <P className="h-3 w-3" />
@@ -241,12 +241,12 @@ function Footer({ hideInquiryBanner: t } = {}) {
       </div>
       <div className="border-t border-white/[0.07] bg-black/50 backdrop-blur-md">
         <div className="mx-auto flex max-w-[1600px] flex-col items-center justify-between gap-4 px-5 py-6 sm:px-7 md:flex-row md:px-10 lg:px-12 xl:px-14">
-          <p className="font-sans text-[10px] uppercase tracking-[0.2em] text-white/35">
+          <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-white/35">
             {"© "}
             {new Date().getFullYear()}
             {" Casa Brio. All rights reserved."}
           </p>
-          <div className="flex items-center gap-6 font-sans text-[10px] uppercase tracking-[0.18em] text-white/35">
+          <div className="flex items-center gap-6 font-sans text-[11px] uppercase tracking-[0.18em] text-white/35">
             <Link href="/contact" className="transition-colors hover:text-white/70">
               Booking Terms
             </Link>

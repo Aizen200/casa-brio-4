@@ -182,7 +182,7 @@ function Testimonials() {
             ))}
           </div>
           <div className="mt-6 flex items-center justify-between px-1">
-            <span className="font-sans text-[11px] font-medium tracking-[0.25em] text-[#c8a951] lg:invisible">
+            <span className="font-sans text-[12px] font-medium tracking-[0.25em] text-[#c8a951] lg:invisible">
               0{e + 1}
               {" / 0"}
               {r.length}
@@ -232,7 +232,7 @@ function Testimonials() {
                 <span className="block font-serif text-[2.2rem] sm:text-[2.6rem] font-normal tracking-tight text-[#d4af37]">
                   <L target={4.6} decimals={1} suffix=" / 5" duration={1800} />
                 </span>
-                <span className="mt-1.5 block font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-[#f4efe6]">
+                <span className="mt-1.5 block font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f4efe6]">
                   Google Rating
                 </span>
                 <span className="mt-1 block font-sans text-xs font-light text-[#a39c93]">
@@ -243,7 +243,7 @@ function Testimonials() {
                 <span className="block font-serif text-[2.2rem] sm:text-[2.6rem] font-normal tracking-tight text-[#d4af37]">
                   <L target={100} decimals={0} suffix="%" duration={2e3} />
                 </span>
-                <span className="mt-1.5 block font-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-[#f4efe6]">
+                <span className="mt-1.5 block font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f4efe6]">
                   Fully Private
                 </span>
                 <span className="mt-1 block font-sans text-xs font-light text-[#a39c93]">

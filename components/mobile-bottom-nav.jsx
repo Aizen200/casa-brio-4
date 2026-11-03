@@ -56,7 +56,7 @@ function MobileBottomNav() {
                 />
               </div>
               <span
-                className={`font-sans text-[10.5px] tracking-[0.14em] uppercase transition-colors ${a ? "font-bold text-[#ffd700] drop-shadow-[0_0_6px_rgba(255,215,0,0.4)]" : "font-normal text-[#9e988f] group-hover:text-[#f4efe6]"}`}
+                className={`font-sans text-[11.5px] whitespace-nowrap tracking-[0.04em] min-[390px]:tracking-[0.14em] uppercase transition-colors ${a ? "font-bold text-[#ffd700] drop-shadow-[0_0_6px_rgba(255,215,0,0.4)]" : "font-normal text-[#9e988f] group-hover:text-[#f4efe6]"}`}
               >
                 {n.label}
               </span>
@@ -76,7 +76,7 @@ function MobileBottomNav() {
                 <O className="h-5 w-5" />
               </div>
               <span
-                className={`font-sans text-[10.5px] tracking-[0.14em] uppercase transition-colors ${a ? "font-semibold text-[#d4af37]" : "font-normal text-[#9e988f] group-hover:text-[#f4efe6]"}`}
+                className={`font-sans text-[11.5px] whitespace-nowrap tracking-[0.04em] min-[390px]:tracking-[0.14em] uppercase transition-colors ${a ? "font-semibold text-[#d4af37]" : "font-normal text-[#9e988f] group-hover:text-[#f4efe6]"}`}
               >
                 {n.label}
               </span>

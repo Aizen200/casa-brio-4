@@ -79,7 +79,7 @@ function V_() {
         <div className="text-center">
           <div className="inline-flex items-center justify-center gap-2.5 mb-3">
             <span className="h-px w-6 bg-[#d4af37]" />
-            <span className="eyebrow text-[10px] tracking-[0.28em] font-semibold text-[#d4af37]">
+            <span className="eyebrow text-[11px] tracking-[0.28em] font-semibold text-[#d4af37]">
               PARTY ROOM GUESTS
             </span>
             <span className="h-px w-6 bg-[#d4af37]" />
@@ -186,7 +186,7 @@ function V_() {
           <div className="relative z-40 text-center pointer-events-none px-6 max-w-2xl flex flex-col items-center justify-center">
             <div className="inline-flex items-center justify-center gap-2.5 sm:gap-3.5 mb-2.5 sm:mb-4">
               <span className="h-px w-6 sm:w-12 bg-[#d4af37]" />
-              <span className="eyebrow text-[10px] sm:text-xs tracking-[0.28em] font-semibold text-[#d4af37]">
+              <span className="eyebrow text-[11px] sm:text-xs tracking-[0.28em] font-semibold text-[#d4af37]">
                 PARTY ROOM GUESTS
               </span>
               <span className="h-px w-6 sm:w-12 bg-[#d4af37]" />
@@ -395,7 +395,7 @@ function PartyRoomClient() {
               >
                 <div className="inline-flex items-center justify-center gap-2 pt-2">
                   <span className="h-px w-5 sm:w-6 bg-[#d4af37]" />
-                  <span className="eyebrow text-[9.5px] sm:text-[10px] tracking-[0.24em] font-semibold text-[#d4af37]">
+                  <span className="eyebrow text-[10.5px] sm:text-[11px] tracking-[0.24em] font-semibold text-[#d4af37]">
                     THE PARTY ROOM • LONAVALA
                   </span>
                   <span className="h-px w-5 sm:w-6 bg-[#d4af37]" />
@@ -411,7 +411,7 @@ function PartyRoomClient() {
                     bar, leather sofas, and no time limits.
                   </p>
                 </div>
-                <div className="flex flex-col items-center gap-1.5 text-[10px] tracking-[0.28em] uppercase text-[#d4af37] font-sans font-medium pb-2">
+                <div className="flex flex-col items-center gap-1.5 text-[11px] tracking-[0.28em] uppercase text-[#d4af37] font-sans font-medium pb-2">
                   <span>SCROLL DOWN TO SEE MORE</span>
                   <M_ className="h-3.5 w-3.5 animate-bounce text-[#d4af37]" />
                 </div>
@@ -530,7 +530,7 @@ function PartyRoomClient() {
             >
               <div className="inline-flex items-center justify-center gap-3.5 mb-5">
                 <span className="h-px w-10 sm:w-16 bg-[#d4af37]" />
-                <span className="eyebrow text-[11px] sm:text-xs tracking-[0.3em] font-semibold text-[#d4af37]">
+                <span className="eyebrow text-[12px] sm:text-xs tracking-[0.3em] font-semibold text-[#d4af37]">
                   THE PARTY ROOM • LONAVALA
                 </span>
                 <span className="h-px w-10 sm:w-16 bg-[#d4af37]" />
@@ -715,7 +715,7 @@ function PartyRoomClient() {
             <div className="mt-8 sm:mt-10 text-center">
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3.5 border border-[#d4af37] bg-transparent px-9 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#d4af37] transition-all duration-300 hover:bg-[#d4af37] hover:text-[#08080a]"
+                className="group inline-flex items-center gap-3.5 whitespace-nowrap border border-[#d4af37] bg-transparent px-6 sm:px-9 py-4 text-xs font-semibold uppercase tracking-[0.1em] sm:tracking-[0.18em] text-[#d4af37] transition-all duration-300 hover:bg-[#d4af37] hover:text-[#08080a]"
               >
                 <span>Book Your Party Night</span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />

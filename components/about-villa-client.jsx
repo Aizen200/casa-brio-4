@@ -256,7 +256,7 @@ function AboutVillaClient() {
           <Reveal>
             <div className="inline-flex items-center justify-center gap-3 mb-4">
               <span className="h-px w-8 bg-[#d4af37]" />
-              <span className="eyebrow text-xs sm:text-sm tracking-[0.32em] font-semibold text-[#d4af37] uppercase">
+              <span className="eyebrow text-xs sm:text-sm whitespace-nowrap tracking-[0.12em] min-[390px]:tracking-[0.2em] sm:tracking-[0.32em] font-semibold text-[#d4af37] uppercase">
                 PRIVATE VILLA IN LONAVALA
               </span>
               <span className="h-px w-8 bg-[#d4af37]" />
@@ -359,7 +359,7 @@ function AboutVillaClient() {
                       <CheckInTimeIcon className="h-8 w-8 sm:h-9 sm:w-9 text-[#d4af37]" />
                     </div>
                     <div>
-                      <span className="block text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-[#d4af37]">
+                      <span className="block text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-[#d4af37]">
                         CHECK-IN
                       </span>
                       <span className="mt-0.5 block font-serif text-base sm:text-xl font-normal text-[#f4efe6]">
@@ -372,7 +372,7 @@ function AboutVillaClient() {
                       <CheckOutTimeIcon className="h-8 w-8 sm:h-9 sm:w-9 text-[#d4af37]" />
                     </div>
                     <div>
-                      <span className="block text-[10px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-[#d4af37]">
+                      <span className="block text-[11px] sm:text-xs font-semibold uppercase tracking-[0.2em] text-[#d4af37]">
                         CHECK-OUT
                       </span>
                       <span className="mt-0.5 block font-serif text-base sm:text-xl font-normal text-[#f4efe6]">
@@ -602,7 +602,7 @@ function AboutVillaClient() {
                       <span className="eyebrow text-xs uppercase tracking-[0.24em] font-semibold text-[#d4af37]">
                         WEEKEND
                       </span>
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#d4af37] bg-[#d4af37]/15 px-2.5 py-0.5 border border-[#d4af37]/35">
+                      <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#d4af37] bg-[#d4af37]/15 px-2.5 py-0.5 border border-[#d4af37]/35">
                         POPULAR
                       </span>
                     </div>
@@ -811,7 +811,7 @@ function AboutVillaClient() {
                     <span className="eyebrow text-xs uppercase tracking-[0.24em] font-semibold text-[#d4af37]">
                       WEEKEND
                     </span>
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-[#d4af37] bg-[#d4af37]/15 px-2.5 py-0.5 border border-[#d4af37]/35">
+                    <span className="text-[11px] font-semibold uppercase tracking-[0.2em] text-[#d4af37] bg-[#d4af37]/15 px-2.5 py-0.5 border border-[#d4af37]/35">
                       POPULAR
                     </span>
                   </div>

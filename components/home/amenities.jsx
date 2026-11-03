@@ -146,7 +146,7 @@ function Amenities() {
                         ✦
                       </span>
                       <span
-                        className="absolute top-8 right-8 text-[#ffe57f] text-[11px] font-serif select-none animate-sparkle-star"
+                        className="absolute top-8 right-8 text-[#ffe57f] text-[12px] font-serif select-none animate-sparkle-star"
                         style={{
                           animationDelay: "1.4s",
                         }}

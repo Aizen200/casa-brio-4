@@ -4,6 +4,11 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: 1.1875rem;
+  --text-xl: 1.3125rem;
   --font-sans: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-serif: var(--font-serif), Georgia, serif;
   --color-background: var(--background);
@@ -41,7 +46,7 @@
   color: #d4af37;
   text-transform: uppercase;
   letter-spacing: 0.28em;
-  font-size: 0.72rem;
+  font-size: calc(0.72rem + 1px);
   font-weight: 600;
 }
 
@@ -58,7 +63,7 @@
   gap: 1.25rem;
   min-height: 3.25rem;
   padding-inline: 1.75rem;
-  font-size: 0.7rem;
+  font-size: calc(0.7rem + 1px);
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;
@@ -81,7 +86,7 @@
   align-items: center;
   gap: 1.25rem;
   padding-inline: 1.75rem;
-  font-size: 0.7rem;
+  font-size: calc(0.7rem + 1px);
   font-weight: 600;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   display: inline-flex;

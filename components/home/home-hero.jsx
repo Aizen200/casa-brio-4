@@ -184,7 +184,7 @@ export const Hero = function () {
             className="mb-6 flex items-center justify-center gap-3.5"
           >
             <span className="h-px w-8 bg-[#d4af37]" />
-            <span className="eyebrow text-xs tracking-[0.28em] font-semibold text-[#d4af37]">
+            <span className="eyebrow text-xs whitespace-nowrap tracking-[0.12em] min-[390px]:tracking-[0.2em] sm:tracking-[0.28em] font-semibold text-[#d4af37]">
               PRIVATE VILLA • LONAVALA
             </span>
             <span className="h-px w-8 bg-[#d4af37]" />
@@ -275,8 +275,8 @@ export const Hero = function () {
                 <span className="flex h-9 w-9 items-center justify-center border border-[#d4af37]/35 bg-[#d4af37]/[0.06]">
                   <A className="h-4 w-4 text-[#d4af37]" strokeWidth={1.5} />
                 </span>
-                <div className="mt-4 font-serif text-[17px] leading-tight text-[#f4efe6]">{e.value}</div>
-                <div className="mt-1.5 font-sans text-[11px] font-light leading-snug text-[#e6dfd5]/60">
+                <div className="mt-4 font-serif text-[18px] leading-tight text-[#f4efe6]">{e.value}</div>
+                <div className="mt-1.5 font-sans text-[12px] font-light leading-snug text-[#e6dfd5]/60">
                   {e.label}
                 </div>
               </div>
@@ -295,10 +295,10 @@ export const Hero = function () {
                 `}
                 key={e.value}
               >
-                <div className="text-[11px] font-semibold uppercase tracking-[0.24em] text-[#d4af37]">
+                <div className="text-[12px] font-semibold uppercase tracking-[0.24em] text-[#d4af37]">
                   {e.tag}
                 </div>
-                <div className="font-serif text-lg lg:text-[19px] font-normal text-[#f4efe6] leading-snug group-hover:text-[#d4af37] transition-colors">
+                <div className="font-serif text-lg lg:text-[20px] font-normal text-[#f4efe6] leading-snug group-hover:text-[#d4af37] transition-colors">
                   {e.value}
                 </div>
                 <div className="font-sans text-xs text-[#e6dfd5]/65 font-light tracking-wide">
