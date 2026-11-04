@@ -6,13 +6,12 @@ import {
   ExternalLink,
   Mail,
   MapPin,
-  MessageCircle,
   Phone,
 } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { Reveal } from "@/components/reveal";
 import Link from "next/link";
-let D = MessageCircle;
+import { whatsappUrl } from "@/components/whatsapp";
 let P = ExternalLink;
 let f = [
     {
@@ -109,21 +108,14 @@ function Footer({ hideInquiryBanner: t } = {}) {
                     </div>
                   </div>
                   <div className="flex flex-col gap-4 sm:flex-row lg:flex-col lg:justify-center">
-                    <Link
-                      href="/contact"
+                    <a
+                      href={whatsappUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group inline-flex items-center justify-center gap-3.5 border border-[#d4af37] bg-[#d4af37] px-8 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#08080a] transition-all duration-300 hover:bg-transparent hover:text-[#d4af37]"
                     >
                       <span>Book Now</span>
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
-                    <a
-                      href="https://wa.me/919820000000?text=Hi%2C%20I%20would%20like%20to%20inquire%20about%20booking%20Casa%20Brio%20estate."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group inline-flex items-center justify-center gap-3.5 border border-[rgba(212,175,55,0.3)] bg-[#08080a] px-8 py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#f4efe6] transition-all duration-300 hover:border-[#d4af37] hover:text-[#d4af37]"
-                    >
-                      <D className="h-4 w-4 text-[#d4af37]" />
-                      <span>WhatsApp</span>
                     </a>
                   </div>
                 </div>

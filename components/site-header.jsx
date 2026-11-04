@@ -2,6 +2,7 @@
 
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import { whatsappUrl } from "@/components/whatsapp";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 let A = Menu;
@@ -126,14 +127,16 @@ export const SiteHeader = function ({ hideOnInitial: t } = {}) {
             })}
           </nav>
           <div className="hidden shrink-0 justify-end lg:flex">
-            <Link
-              href="/contact"
+            <a
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
               className={
                 "\n              inline-flex\n              items-center\n              justify-center\n              border\n              border-[rgba(212,175,55,0.4)]\n              bg-[#121015]/60\n              px-4\n              py-2\n              text-[11px]\n              font-semibold\n              uppercase\n              tracking-[0.2em]\n              text-[#f4efe6]\n              backdrop-blur-md\n              transition-all\n              duration-300\n              hover:border-[#d4af37]\n              hover:bg-[#d4af37]\n              hover:text-[#08080a]\n              hover:shadow-[0_0_15px_rgba(212,175,55,0.35)]\n              active:scale-[0.98]\n            "
               }
             >
               <span>BOOK NOW</span>
-            </Link>
+            </a>
           </div>
           <button
             type="button"
@@ -204,15 +207,17 @@ export const SiteHeader = function ({ hideOnInitial: t } = {}) {
                 </Link>
               );
             })}
-            <Link
-              href="/contact"
+            <a
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => d(!1)}
               className={
                 "\n              mt-6\n              flex\n              items-center\n              justify-center\n              border\n              border-[rgba(212,175,55,0.4)]\n              bg-[#121015]/60\n              px-4\n              py-3\n              text-[11.5px]\n              font-semibold\n              uppercase\n              tracking-[0.2em]\n              text-[#f4efe6]\n              backdrop-blur-md\n              transition-all\n              duration-300\n              hover:border-[#d4af37]\n              hover:bg-[#d4af37]\n              hover:text-[#08080a]\n              hover:shadow-[0_0_15px_rgba(212,175,55,0.35)]\n              active:scale-[0.98]\n            "
               }
             >
               <span>BOOK NOW</span>
-            </Link>
+            </a>
           </nav>
         </div>
       </header>

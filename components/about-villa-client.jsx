@@ -28,7 +28,7 @@ import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import { Reveal } from "@/components/reveal";
 import { SiteHeader } from "@/components/site-header";
 import Image from "next/image";
-import Link from "next/link";
+import { whatsappUrl } from "@/components/whatsapp";
 import { ArrowRight } from "lucide-react";
 import { SectionDivider } from "@/components/section-divider";
 import { Footer } from "@/components/footer";
@@ -267,15 +267,17 @@ function AboutVillaClient() {
           </Reveal>
           <Reveal delay={100}>
             <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href="/contact"
+              <a
+                href={whatsappUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={
                   "\n                  group\n                  inline-flex\n                  h-12\n                  sm:h-13\n                  items-center\n                  gap-3\n                  rounded-sm\n                  bg-[#d4af37]\n                  px-7\n                  sm:px-8\n                  text-xs\n                  font-semibold\n                  uppercase\n                  tracking-[0.16em]\n                  text-[#08080a]\n                  shadow-[0_4px_25px_rgba(212,175,55,0.25)]\n                  transition-all\n                  duration-300\n                  hover:bg-[#b8952b]\n                  hover:shadow-[0_4px_35px_rgba(212,175,55,0.4)]\n                "
                 }
               >
                 <span>Book the Villa</span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
+              </a>
               <a
                 href="#overview"
                 className={
@@ -585,13 +587,15 @@ function AboutVillaClient() {
                     </ul>
                   </div>
                   <div className="mt-10">
-                    <Link
-                      href="/contact"
+                    <a
+                      href={whatsappUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group flex w-full items-center justify-center gap-2.5 border border-[rgba(212,175,55,0.4)] bg-[rgba(18,16,21,0.6)] py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#f4efe6] transition-all duration-300 hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#08080a]"
                     >
                       <span>CONTACT US</span>
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -649,13 +653,15 @@ function AboutVillaClient() {
                     </ul>
                   </div>
                   <div className="mt-10">
-                    <Link
-                      href="/contact"
+                    <a
+                      href={whatsappUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group flex w-full items-center justify-center gap-2.5 bg-[#d4af37] py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#08080a] shadow-[0_4px_25px_rgba(212,175,55,0.25)] transition-all duration-300 hover:bg-[#b8952b]"
                     >
                       <span>BOOK NOW</span>
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -710,13 +716,15 @@ function AboutVillaClient() {
                     </ul>
                   </div>
                   <div className="mt-10">
-                    <Link
-                      href="/contact"
+                    <a
+                      href={whatsappUrl()}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="group flex w-full items-center justify-center gap-2.5 border border-[rgba(212,175,55,0.4)] bg-[rgba(18,16,21,0.6)] py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#f4efe6] transition-all duration-300 hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#08080a]"
                     >
                       <span>CONTACT US</span>
                       <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -794,13 +802,15 @@ function AboutVillaClient() {
                   </ul>
                 </div>
                 <div className="mt-10">
-                  <Link
-                    href="/contact"
+                  <a
+                    href={whatsappUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex w-full items-center justify-center gap-2.5 border border-[rgba(212,175,55,0.4)] bg-[rgba(18,16,21,0.6)] py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#f4efe6] transition-all duration-300 hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#08080a]"
                   >
                     <span>CONTACT US</span>
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </Reveal>
@@ -858,13 +868,15 @@ function AboutVillaClient() {
                   </ul>
                 </div>
                 <div className="mt-10">
-                  <Link
-                    href="/contact"
+                  <a
+                    href={whatsappUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex w-full items-center justify-center gap-2.5 bg-[#d4af37] py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#08080a] shadow-[0_4px_25px_rgba(212,175,55,0.25)] transition-all duration-300 hover:bg-[#b8952b] hover:shadow-[0_4px_35px_rgba(212,175,55,0.4)]"
                   >
                     <span>BOOK NOW</span>
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </Reveal>
@@ -919,13 +931,15 @@ function AboutVillaClient() {
                   </ul>
                 </div>
                 <div className="mt-10">
-                  <Link
-                    href="/contact"
+                  <a
+                    href={whatsappUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group flex w-full items-center justify-center gap-2.5 border border-[rgba(212,175,55,0.4)] bg-[rgba(18,16,21,0.6)] py-4 text-xs font-semibold uppercase tracking-[0.18em] text-[#f4efe6] transition-all duration-300 hover:border-[#d4af37] hover:bg-[#d4af37] hover:text-[#08080a]"
                   >
                     <span>CONTACT US</span>
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             </Reveal>

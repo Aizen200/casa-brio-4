@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { SiteHeader } from "@/components/site-header";
 import Link from "next/link";
+import { whatsappUrl } from "@/components/whatsapp";
 import { ArrowRight, ShieldCheck, Trophy, Waves, Wine } from "lucide-react";
 let d = [
     {
@@ -243,15 +244,17 @@ export const Hero = function () {
             }}
             className="mt-9 flex flex-wrap items-center justify-center gap-4"
           >
-            <Link
-              href="/contact"
+            <a
+              href={whatsappUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
               className={
                 "\n                group\n                inline-flex\n                h-13\n                items-center\n                gap-3\n                rounded-sm\n                bg-[#d4af37]\n                px-8\n                text-xs\n                font-semibold\n                uppercase\n                tracking-[0.16em]\n                text-[#08080a]\n                shadow-[0_4px_25px_rgba(212,175,55,0.25)]\n                transition-all\n                duration-300\n                hover:bg-[#b8952b]\n                hover:shadow-[0_4px_35px_rgba(212,175,55,0.4)]\n              "
               }
             >
               <span>Book the Villa</span>
               <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-            </Link>
+            </a>
             <Link
               href="/about-villa"
               className={

@@ -13,6 +13,7 @@ import {
   SparklesIcon,
 } from "@/components/icons";
 import Link from "next/link";
+import { whatsappUrl } from "@/components/whatsapp";
 import { Footer } from "@/components/footer";
 let M_ = ChevronDown;
 let b = [
@@ -713,13 +714,15 @@ function PartyRoomClient() {
           </div>
           <Reveal delay={200}>
             <div className="mt-8 sm:mt-10 text-center">
-              <Link
-                href="/contact"
+              <a
+                href={whatsappUrl()}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3.5 whitespace-nowrap border border-[#d4af37] bg-transparent px-6 sm:px-9 py-4 text-xs font-semibold uppercase tracking-[0.1em] sm:tracking-[0.18em] text-[#d4af37] transition-all duration-300 hover:bg-[#d4af37] hover:text-[#08080a]"
               >
                 <span>Book Your Party Night</span>
                 <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-              </Link>
+              </a>
             </div>
           </Reveal>
         </div>

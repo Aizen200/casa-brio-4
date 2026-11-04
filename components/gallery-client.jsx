@@ -7,6 +7,7 @@ import { Reveal } from "@/components/reveal";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { whatsappUrl } from "@/components/whatsapp";
 import { Footer } from "@/components/footer";
 import { FramePhoto } from "@/components/lightbox";
 import { galleryPhotos } from "@/components/gallery-photos";
@@ -530,15 +531,17 @@ export const GalleryClient = function () {
                   Book a visit, or ask us about booking Casa Brio for your group.
                 </p>
                 <div className="flex flex-wrap items-center justify-center gap-4">
-                  <Link
-                    href="/contact"
+                  <a
+                    href={whatsappUrl()}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={
                       "\n                    group\n                    inline-flex\n                    h-12\n                    sm:h-13\n                    items-center\n                    gap-3\n                    rounded-none\n                    bg-[#d4af37]\n                    px-7\n                    sm:px-8\n                    text-xs\n                    font-semibold\n                    uppercase\n                    tracking-[0.16em]\n                    text-[#08080a]\n                    shadow-[0_4px_25px_rgba(212,175,55,0.25)]\n                    transition-all\n                    duration-300\n                    hover:bg-[#b8952b]\n                    hover:shadow-[0_4px_35px_rgba(212,175,55,0.4)]\n                  "
                     }
                   >
                     <span>Ask About Booking</span>
                     <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                  </Link>
+                  </a>
                   <Link
                     href="/party-room"
                     className={

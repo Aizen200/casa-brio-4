@@ -6,6 +6,7 @@ import { SiteHeader } from "@/components/site-header";
 import { Reveal } from "@/components/reveal";
 import { motion } from "framer-motion";
 import { Footer } from "@/components/footer";
+import { whatsappUrl } from "@/components/whatsapp";
 let I = Check;
 let C = CircleCheck;
 let M = MessageSquare;
@@ -24,14 +25,15 @@ function ContactClient() {
       notes: "",
     }),
     [l, n] = useState(!1),
-    x = encodeURIComponent(`Hello Casa Brio,
+    x = whatsappUrl(`Hello Casa Brio,
 
 I would like to book the villa:
 - Name: ${e.name || "[Guest Name]"}
 - Dates: ${e.checkIn || "TBD"} to ${e.checkOut || "TBD"}
 - Guests: ${e.guests}
 - Occasion: ${e.occasion}
-- Extras: ${e.addons.join(", ") || "None specified"}`),
+- Extras: ${e.addons.join(", ") || "None specified"}${e.notes ? `
+- Notes: ${e.notes}` : ""}`),
     p =
       "mt-2 h-12 w-full border border-[rgba(212,175,55,0.2)] bg-[#121015] px-4 text-sm font-sans font-light text-[#f4efe6] outline-none transition-all placeholder:text-[#a39c93] focus:border-[#d4af37]",
     v = "block text-[11px] font-semibold uppercase tracking-[0.22em] text-[#d4af37]";
@@ -95,20 +97,20 @@ I would like to book the villa:
                     <div className="flex min-h-[480px] flex-col items-center justify-center text-center">
                       <C className="h-10 w-10 text-[#b99a55]" />
                       <h3 className="mt-6 font-serif text-3xl font-normal text-[#f7f3eb]">
-                        We got your request
+                        Send your request on WhatsApp
                       </h3>
                       <p className="mt-4 max-w-md text-sm leading-7 text-neutral-400">
-                        Thank you, <span className="text-white">{e.name || "Guest"}</span>. Our
-                        team will check your request and contact you soon.
+                        Thank you, <span className="text-white">{e.name || "Guest"}</span>. WhatsApp has
+                        opened with your details. Press send and our team will reply soon.
                       </p>
                       <div className="mt-8 flex flex-wrap justify-center gap-6">
                         <a
-                          href={`https://wa.me/919820000000?text=${x}`}
+                          href={x}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="group inline-flex items-center gap-3 border-b border-[#b99a55] pb-2 text-[12px] font-medium uppercase tracking-[0.2em] text-[#d0b36d] transition-colors hover:text-white"
                         >
-                          Continue on WhatsApp
+                          Open WhatsApp
                           <U className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                         </a>
                         <button
@@ -122,7 +124,7 @@ I would like to book the villa:
                   ) : (
                     <form
                       onSubmit={(e) => {
-                        (e.preventDefault(), n(!0));
+                        (e.preventDefault(), n(!0), window.open(x, "_blank", "noopener,noreferrer"));
                       }}
                       className="mt-9 space-y-8"
                     >
@@ -317,8 +319,7 @@ I would like to book the villa:
                       </div>
                       <div className="flex flex-col gap-5 border-t border-white/8 pt-8 sm:flex-row sm:items-center sm:justify-between">
                         <p className="max-w-sm text-xs leading-5 text-neutral-600">
-                          Dates depend on availability. Our team will contact you to confirm
-                          your booking.
+                          Dates depend on availability. Our team will reply on WhatsApp to confirm your booking.
                         </p>
                         <motion.button
                           type="submit"
@@ -330,7 +331,7 @@ I would like to book the villa:
                           }}
                           className="group flex shrink-0 items-center gap-3 border-b border-[#b99a55] pb-2 text-[12px] font-medium uppercase tracking-[0.22em] text-[#d0b36d] transition-colors hover:text-white"
                         >
-                          Send Request
+                          Send on WhatsApp
                           <U className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                         </motion.button>
                       </div>
@@ -395,7 +396,7 @@ I would like to book the villa:
                             WhatsApp
                           </p>
                           <a
-                            href="https://wa.me/919820000000?text=Hello%20Casa%20Brio%2C%20I%20would%20like%20to%20book%20the%20villa."
+                            href={whatsappUrl()}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="group mt-2 inline-flex items-center gap-2 text-sm text-white transition-colors hover:text-[#d0b36d]"
